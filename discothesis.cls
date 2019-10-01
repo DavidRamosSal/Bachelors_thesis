@@ -13,7 +13,7 @@
 %% Copyright 1993 1994 1995 1996 1997 1998 1999 2000 2001 2002 2003 2004 2005 2006
 %% The LaTeX3 Project and any individual authors listed elsewhere
 %% in this file.
-%%
+%% 
 %% This file was generated from file(s) of the LaTeX base system.
 %% --------------------------------------------------------------
 %%

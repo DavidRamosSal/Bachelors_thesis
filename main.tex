@@ -1,7 +1,8 @@
 \documentclass[a4paper, oneside,openany,12pt]{discothesis}
 
 \usepackage[utf8]{inputenc}
-\usepackage[spanish]{babel}
+\usepackage[spanish,es-tabla]{babel}
+\decimalpoint
 \usepackage[T1]{fontenc}
 \usepackage{anysize}
 \marginsize{4cm}{2cm}{3cm}{3cm}
@@ -13,6 +14,7 @@
 \usepackage{physics}
 \usepackage{tensor}
 \usepackage{float}
+\usepackage[position=top]{subfig}
 \usepackage{bm}
 \usepackage{siunitx}
 \usepackage{multicol}
@@ -23,12 +25,35 @@
 \usepackage{amsmath}
 \usepackage{cancel}
 \usepackage{enumitem}
+\usepackage{etoolbox}
+\usepackage{booktabs,arydshln,ltablex}
+
+\def\adl@drawiv#1#2#3{%
+        \hskip.5\tabcolsep
+        \xleaders#3{#2.5\@tempdimb #1{1}#2.5\@tempdimb}%
+                #2\z@ plus1fil minus1fil\relax
+        \hskip.5\tabcolsep}
+\newcommand{\cdashlinelr}[1]{%
+  \noalign{\vskip\aboverulesep
+           \global\let\@dashdrawstore\adl@draw
+           \global\let\adl@draw\adl@drawiv}
+  \cdashline{#1}
+  \noalign{\global\let\adl@draw\@dashdrawstore
+           \vskip\belowrulesep}}
+
+\usepackage{adjustbox}
+\usepackage{multirow}
+\appto\appendix{\addtocontents{toc}{\protect\setcounter{tocdepth}{0}}}
+\usepackage{tikz}
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;}
+\newcommand{\Cross}{$\mathbin{\tikz [x=1.4ex,y=1.4ex,line width=.2ex] \draw (0,0) -- (1,1) (0,1) -- (1,0);}$}%
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % DOCUMENT METADATA
 
 \thesistype{PROPUESTA DE TESIS PARA OPTAR AL TÍTULO DE FÍSICO} % Master's Thesis, Bachelor's Thesis, Semester Thesis, Group Project
-\title{ESTRUCTURA ESTELAR Y ESTABILIDAD DE OBJETOS COMPACTOS CON UNA ECUACIÓN DE ESTADO NUMÉRICA}
+\title{ESTRUCTURA Y ESTABILIDAD DE OBJETOS COMPACTOS CON ECUACIONES DE ESTADO DE LA MATERIA ULTRADENSA}
 
 \author{DAVID LEONARDO RAMOS SALAMANCA}
 \email{}%david.ramos.salamanca@outlook.com}
@@ -49,13 +74,13 @@ BUCARAMANGA \\[2pt]
 
 % Optionally, titleabs, authorabs, keywords and categories of the work can be shown (on the Abstract page)
 \keywords{Estructura estelar, estabilidad,ecuación de estado numérica}
-\titleabs{Estructura estelar de objetos compactos con una ecuación de estado numérica\footnote{Propuesta de trabajo de grado}} %Title for abstract
+\titleabs{Estructura estelar de objetos compactos con ecuaciones de estado de la materia ultradensa\footnote{Propuesta de trabajo de grado}} %Title for abstract
 \authorabs{David Leonardo Ramos Salamanca\footnote{Facultad de Ciencias. Escuela de física. Director: Luis A. Núñez de Villavicencio Martínez}} %Author for abstract
 %\categories{ACM categories go here.}
 
 %Información para abstract en otro idioma----------------------- 
 \keywordss{Stellar structure, stability, numerical equation of state}
-\titleabss{Stellar structure and stability of compact objects with a numerical equation of state\footnote{Bachellor's thesis}} %Title for abstract
+\titleabss{Stellar structure and stability of compact objects with ultradense matter equations of state \footnote{Bachellor's thesis}} %Title for abstract
 \authorabss{David Leonardo Ramos Salamanca\footnote{Facultad de Ciencias. Escuela de física. Adviser: Luis A. Núñez de Villavicencio Martínez}}
 
 \date{\today}
