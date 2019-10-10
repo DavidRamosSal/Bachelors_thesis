@@ -10,15 +10,17 @@
 \MakePerPage{footnote} %footnote counting per page
 
 %additional packages
+\PassOptionsToPackage{hyphens}{url}\usepackage{hyperref}
 \usepackage{graphicx}
 \usepackage{physics}
 \usepackage{tensor}
 \usepackage{float}
 \usepackage[position=top]{subfig}
+\usepackage[labelfont=bf]{caption}
 \usepackage{bm}
 \usepackage{siunitx}
 \usepackage{multicol}
-\usepackage{hyperref}
+%\usepackage{hyperref}
 \usepackage{soul}
 \usepackage{pgfgantt}
 \usepackage{mathtools}
@@ -41,6 +43,9 @@
   \noalign{\global\let\adl@draw\@dashdrawstore
            \vskip\belowrulesep}}
 
+\newcommand{\cmmt}[1]{\ignorespaces}
+\newcommand{\quotes}[1]{``#1''}
+
 \usepackage{adjustbox}
 \usepackage{multirow}
 \appto\appendix{\addtocontents{toc}{\protect\setcounter{tocdepth}{0}}}
@@ -52,7 +57,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % DOCUMENT METADATA
 
-\thesistype{PROPUESTA DE TESIS PARA OPTAR AL TÍTULO DE FÍSICO} % Master's Thesis, Bachelor's Thesis, Semester Thesis, Group Project
+\thesistype{TRABAJO DE GRADO PARA OPTAR AL TÍTULO DE FÍSICO} % Master's Thesis, Bachelor's Thesis, Semester Thesis, Group Project
 \title{ESTRUCTURA Y ESTABILIDAD DE OBJETOS COMPACTOS CON ECUACIONES DE ESTADO DE LA MATERIA ULTRADENSA}
 
 \author{DAVID LEONARDO RAMOS SALAMANCA}
@@ -74,7 +79,7 @@ BUCARAMANGA \\[2pt]
 
 % Optionally, titleabs, authorabs, keywords and categories of the work can be shown (on the Abstract page)
 \keywords{Estructura estelar, estabilidad,ecuación de estado numérica}
-\titleabs{Estructura estelar de objetos compactos con ecuaciones de estado de la materia ultradensa\footnote{Propuesta de trabajo de grado}} %Title for abstract
+\titleabs{Estructura estelar de objetos compactos con ecuaciones de estado de la materia ultradensa\footnote{Trabajo de grado}} %Title for abstract
 \authorabs{David Leonardo Ramos Salamanca\footnote{Facultad de Ciencias. Escuela de física. Director: Luis A. Núñez de Villavicencio Martínez}} %Author for abstract
 %\categories{ACM categories go here.}
 

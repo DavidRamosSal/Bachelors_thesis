@@ -1,11 +1,30 @@
 \chapter{Aspectos generales de las estrellas de neutrones}
 
-Las estrellas de neutrones han sido estudiadas extensivamente durante 50 años y a pesar de que sus más importantes características no han sido predichas unívocamente ($M$ y $R$), debido a su sensible dependencia de la EoS de la materia nuclear ultradensa,%al reto teórico que representa obtenerla a partir de una teoría relativista de muchos cuerpos para partículas que interactúan fuertemente,
-la EOS en regiones con densidades menores a $\rho_0$ se conoce con la suficiente precisión \cite{Haensel2007,Chamel2008} para reconocer características generales de su estructura interna. Además, la medición de la masa de numerosas estrellas de neutrones y la observación del evento de ondas gravitacionales GW170817, han puesto algunas restricciones en la EoS a densidades altas \cite{Rezzolla2017}. 
+Como se mencionó en la introducción, las estrellas han sido estudiadas extensivamente durante 50 años y a pesar de que sus más importantes características no han sido predichas unívocamente ($M_{\text{max}}$ y $R_{1.4}$), debido a su sensible dependencia de la EOS de la materia nuclear ultradensa,%al reto teórico que representa obtenerla a partir de una teoría relativista de muchos cuerpos para partículas que interactúan fuertemente,
+la EOS en regiones con densidades menores a $\rho_0$ se conocen con la suficiente precisión \cite{Haensel2007,Chamel2008} para reconocer características generales de su estructura interna. 
 
-En este capítulo se resumirá el conocimiento actual del interior de las estrellas de neutrones, así como las hipótesis respecto a la composición de su interior. Finalmente se presentarán las manifestaciones observacionales más importantes de las estrellas de neutrones.
+En este capítulo se resumirá el conocimiento actual de las estrellas de neutrones comenzando por cómo son formadas, describiendo las regiones interiores que se conocen relativamente bien y mencionando las hipótesis respecto a la composición de su núcleo. Finalmente se presentarán algunas de las manifestaciones observacionales más importantes de las estrellas de neutrones.
 
-\TODO{Mejorar la idea}
+
+\section{De estrellas normales a estrellas de neutrones}
+
+Las estrellas son formadas a partir de nubes de gas interestelar, compuestas en su mayoría de hidrógeno molecular, que debido a algún tipo de perturbación comienzan a colapsar gravitacionalmente. La compresión del gas incrementa su temperatura hasta que la presión es capaz de balancearla, alcanzando el equilibrio hidrostático. Este equilibrio dura poco debido a que la pérdida de energía (en forma de radiación) disminuye la temperatura del gas y la consecuente reducción de la presión permite que la contracción continúe. El proceso de contracción y equilibrio del material se repite durante un periodo de tiempo (fase pre-secuencia principal), hasta que la temperatura aumenta lo suficiente para que la fusión de hidrógeno en helio pueda ocurrir en el núcleo ($T\approx 10^7\,\si{\kelvin}$). Este proceso de fusión nuclear compensa las pérdidas radiativas y mantiene a la estrella en un equilibrio hidrostático estable \cite{Scilla2016}.
+
+Las reacciones nucleares pueden sostener a la estrella durante la mayor parte de su vida luminosa (de millones a billones de años, dependiendo de su masa inicial \cite{Salaris2005}). Estrellas en esta fase forman la secuencia principal del diagrama de Hertzsprung-Russell.
+\setcounter{footnote}{0}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=205pt]{figures/H-R_diagram.pdf}%
+    \caption[Diagrama Hertzsprung-Russell]{Diagrama Hertzsprung-Russell.\protect\footnotemark}
+    \label{HR}
+\end{figure}
+\footnotetext{Adaptado de \url{https://commons.wikimedia.org/wiki/File:H-R_diagram.svg}}
+
+La evolución de la estrella después de agotar el hidrógeno depende de su masa: estrellas con \emph{masas pequeñas e intermedias} ($M\leq M_{\odot}$) procederán a fusionar helio formando carbono en su núcleo. Esto representa una transición de la secuencia principal hacia la rama de gigantes (hacia el rojo) en el diagrama de Hertzsprung-Russell. Durante las últimas etapas de evolución, estas estrellas liberan sus capas más externas formando una nebulosa planetaria y dejando un núcleo que será sostenido por la presión de degeneración de electrones, conocido como una enana blanca \cite{Padmanabhan2000}.
+
+Estrellas \emph{masivas} ($M>8 M_{\odot}$) entran en un ciclo de fusión de elementos en su núcleo, formando elementos cada vez más pesados (helio, carbono, oxígeno, magnesio, silicio y hierro) \cite{Glendenning2000}. Al final de cada una de estas etapas de fusión los elementos pesados recién creados formarán un núcleo, y los restos del elemento ligero forman un cascarón a su alrededor. En el diagrama de Hertzsprung-Rusell estas estrellas llegarán hasta la parte superior de la secuencia principal y se moverán hacia la rama de supergigantes. Al alcanzar el hierro, la fusión deja de ser exotérmica (en vez de liberar energía la requerirá) y deja a la estrella sin una fuente de energía que mantenga el equilibrio hidrostático. Estas estrellas colapsarán eventualmente en un evento conocido como supernova (tipo II)\cmmt{ de colapso de núcleo}: los cascarones de los distintos elementos caen sobre el núcleo de hierro desencadenando, mediante mecanismos que no han sido enteramente comprendidos \cite{Janka2012}, la eyección de gran parte de su masa en una explosión \cite{Woosley2005}.
+
+Tras la supernova, el núcleo colapsado \cmmt{ —cuya composición precisa no se conoce pero se presume contiene neutrones, protones, mesones, hiperones e incluso quarks desconfinados—}  inicia un proceso de enfriamiento y reajuste estructural, durante el cual emite una gran cantidad de energía en forma de radiación y neutrinos (importantes a la hora de verificar modelos teóricos, cf. \cite{Alvarez-Salazar2018}). Después de alcanzar una composición estable —no conocida con precisión pero se presume contiene neutrones, protones, mesones, hiperones e incluso quarks desconfinados \cite{Lattimer2004}— la presión de degeneración de sus componentes y la repulsión de rango corto entre nucleones sostendrán el núcleo colapsado \cite{Glendenning2000}, alcanzando una estructura definida conocida generalmente como un objeto compacto o estrella de neutrones.
 
 \section{Estructura interna}
 La composición de las estrellas de neutrones, contrario a lo que el nombre sugiere, se presume es muy rica y varía a lo largo de su extensión radial, esta variada composición y las distintas fases que exhiben, están distribuidas en una estructura de cascarones, denominada generalmente una red cristalina de Coulomb (ver Figura \ref{NSC}).

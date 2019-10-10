@@ -4,16 +4,13 @@ La métrica de un espacio-tiempo estático con simetría esférica está dada po
 \begin{equation}
     \bm{g}=-e^{2 a(r)} \dd{t} \otimes \dd{t}+e^{2 b(r)} \dd{r} \otimes \dd{r} +r^{2}\left(\dd{\theta} \otimes \dd{\theta}+\operatorname{sen}^{2} \theta \dd{\varphi} \otimes \dd{\varphi}\right),
 \end{equation}
-el tensor de curvatura de Riemann correspondiente a esta métrica puede ser calculado de manera simple haciendo uso del cálculo de Cartan. 
+donde las \quotes{$\dd$}s representan derivadas exteriores. El tensor de curvatura de Riemann correspondiente a esta métrica puede ser calculado de manera simple haciendo uso del cálculo de Cartan (cf. \cite{Chandrasekhar1983,Straumann2013}). 
 
 En el cálculo de Cartan se hace uso del hecho de que es posible escoger como base del espacio cotangente $T^{*}_p$ en un punto $p$ de la variedad, una base $\omega^{\alpha}$ diferente a la base coordenada $\dd{x^\alpha}$. Esta base se escoge de modo tal que la métrica pueda ser escrita como 
 \begin{equation}
     \bm{g}=\tensor{\eta}{_\alpha_\beta} \omega^{\alpha} \otimes \omega^{\beta},
 \end{equation}
-donde $\tensor{\eta}{_\alpha_\beta}$ es la métrica de Minkowski. Este tipo de bases se conocen como bases ortonormales y para ellas las 1-formas de conexión $\tensor{\Gamma}{^\alpha_\beta}$ cumplen la condición
-\begin{equation}
-    \Gamma_{\alpha \beta}+\Gamma_{\alpha \beta}=0. \label{skew}
-\end{equation}
+donde $\tensor{\eta}{_\alpha_\beta}$ es la métrica de Minkowski. Este tipo de bases se conocen como bases ortonormales. 
 Con lo anterior en mente, se define la tétrada de 1-formas base como
 %\begin{subequations}
 \begin{equation}
@@ -24,14 +21,18 @@ Con lo anterior en mente, se define la tétrada de 1-formas base como
     \label{tetrada}
 \end{equation}
 %\end{subequations}
-Usando las ecuaciones de estructura de Cartan para un espacio-tiempo sin torsión\TODO{Citar a Chandrasekar o Straumann}
+Usando las ecuaciones de estructura de Cartan para un espacio-tiempo sin torsión
 \begin{subequations}
 \begin{align}
     \dd{\omega^\alpha} =& -\tensor{\Gamma}{^\alpha_ \mu} \wedge \omega^{\mu}\,, \label{1SE}\\
     \tensor{\Omega}{^\alpha_\beta} =& \dd{ \tensor{\Gamma}{^\alpha_\beta}} + \tensor{\Gamma}{^\alpha_\mu}  \wedge \tensor{\Gamma}{^\mu_\beta}\,, \label{2SE}
 \end{align}
 \end{subequations}
-se pueden obtener las las 2-formas de curvatura $\tensor{\Omega}{^\alpha_\beta}$ y a partir de estas, las componentes del tensor de Riemann pues por definición 
+donde $\tensor{\Gamma}{^\alpha_\beta}$ son las 1-formas de conexión, las cuales cumplen 
+\begin{equation}
+    \Gamma_{\alpha \beta}+\Gamma_{\alpha \beta}=0. \label{skew}
+\end{equation}
+A partir de las ecuaciones de estructura \eqref{1SE} y \eqref{2SE} se pueden obtener las 2-formas de curvatura $\tensor{\Omega}{^\alpha_\beta}$ y a partir de estas, las componentes del tensor de Riemann ya que por definición 
 \begin{equation}
     \tensor{\Omega}{^\alpha_\beta}=\frac{1}{2}\tensor{R}{^\alpha_\beta_\mu_\nu}\omega^\mu \wedge \omega^\nu.
 \end{equation}
@@ -42,26 +43,32 @@ Comenzando por el cálculo de las 1-formas de conexión, se hallan las derivadas
         \dd{\omega^1}=&\dd{e^b}\wedge\dd{r}+e^b\cancelto{0}{\dd{(\dd{r})}} = b^{\prime}e^b\dd{r}\wedge\dd{r}=0, \\
         \dd{\omega^2}=&\dd{r}\wedge\dd{\theta} + r\cancelto{0}{\dd{(\dd{\theta})}} = -\frac{e^{-b}}{r}\omega^2 \wedge\omega^1, \\
         \dd{\omega^3}=&\dd{(rsen\theta)}\wedge\dd{\varphi} + r\sen{\theta}\cancelto{0}{\dd{(\dd{\varphi})}} = \sen{\theta}\dd{r}\wedge\dd{\varphi} + r\cos{\theta}\dd{\theta}\wedge\dd{\varphi} \\
-        & \phantom{{}\dd{(rsen\theta)}\wedge\dd{\varphi} + r\sen{\theta}\cancelto{0}{\dd{(\dd{\varphi})}}} = -\frac{e^{-b}}{r} \omega^3 \wedge \omega^1 - \frac{\cot{\theta}}{r} \omega^3 \wedge \omega^2,
+        & \phantom{{}\dd{(rsen\theta)}\wedge\dd{\varphi} + r\sen{\theta}\cancelto{0}{\dd{(\dd{\varphi})}}} = -\frac{e^{-b}}{r} \omega^3 \wedge \omega^1 - \frac{\cot{\theta}}{r} \omega^3 \wedge \omega^2.
     \end{split}
     \end{align}
-reemplazando en la primera ecuación de estructura \eqref{1SE}
-    \begin{align*}
+reemplazando en la primera ecuación de estructura \eqref{1SE} se obtiene
+    \begin{align}
+    \begin{split}
         \tensor{\Gamma}{^0_0}\wedge\omega^0 + \tensor{\Gamma}{^0_1}\wedge\omega^1+\tensor{\Gamma}{^0_2}\wedge\omega^2+\tensor{\Gamma}{^0_3}\wedge\omega^3 =& \,a^{\prime} e^{-b} \omega^0 \wedge \omega^1,  \\
         \tensor{\Gamma}{^1_0}\wedge\omega^0 + \tensor{\Gamma}{^1_1}\wedge\omega^1+\tensor{\Gamma}{^1_2}\wedge\omega^2+\tensor{\Gamma}{^1_3}\wedge\omega^3 =&\, 0, \\
         \tensor{\Gamma}{^2_0}\wedge\omega^0 + \tensor{\Gamma}{^2_1}\wedge\omega^1+\tensor{\Gamma}{^2_2}\wedge\omega^2+\tensor{\Gamma}{^2_3}\wedge\omega^3 =& \frac{e^{-b}}{r}\omega^2 \wedge\omega^1, \\
-        \tensor{\Gamma}{^0_0}\wedge\omega^0 + \tensor{\Gamma}{^3_1}\wedge\omega^1+\tensor{\Gamma}{^3_2}\wedge\omega^2+\tensor{\Gamma}{^3_3}\wedge\omega^3 =& \frac{e^{-b}}{r} \omega^3 \wedge \omega^1 + \frac{\cot{\theta}}{r} \omega^3 \wedge \omega^2,
-    \end{align*}    
-de donde se pueden identificar las 1-formas de conexión no nulas
+        \tensor{\Gamma}{^0_0}\wedge\omega^0 + \tensor{\Gamma}{^3_1}\wedge\omega^1+\tensor{\Gamma}{^3_2}\wedge\omega^2+\tensor{\Gamma}{^3_3}\wedge\omega^3 =& \frac{e^{-b}}{r} \omega^3 \wedge \omega^1 + \frac{\cot{\theta}}{r} \omega^3 \wedge \omega^2.
+        \end{split}\label{1ee}
+    \end{align}    
+Teniendo en cuenta que la condición \eqref{skew} implica las relaciones 
+\begin{equation*}
+    \tensor{\Gamma}{^0_0}=0,\quad \tensor{\Gamma}{^0_i} = \tensor{\Gamma}{^i_0}, \quad \tensor{\Gamma}{^i_i} = 0, \quad \tensor{\Gamma}{^i_j} = -\tensor{\Gamma}{^j_i},
+\end{equation*}
+de \eqref{1ee} se obtienen que las 1-formas de conexión no nulas son
 \begin{subequations}
     \begin{align}
         \tensor{\Gamma}{^0_1} =& \,\tensor{\Gamma}{^1_0} = a^{\prime} e^{-b} \omega^0, \label{1fa} \\
         \tensor{\Gamma}{^2_1} =& -\tensor{\Gamma}{^1_2} = \frac{e^{-b}}{r}\omega^2, \label{1fb} \\
         \tensor{\Gamma}{^3_1} =& -\tensor{\Gamma}{^1_3} = \frac{e^{-b}}{r}\omega^3, \label{1fc} \\
-        \tensor{\Gamma}{^3_2} =& -\tensor{\Gamma}{^2_3} = \frac{\cot{\theta}}{r} \omega^3, \label{1fd}
+        \tensor{\Gamma}{^3_2} =& -\tensor{\Gamma}{^2_3} = \frac{\cot{\theta}}{r} \omega^3. \label{1fd}
     \end{align}
 \end{subequations}
-donde las relaciones entre las 1-formas se siguen de la relación \eqref{skew}.
+
 
 Hallando las derivadas exteriores de \eqref{1fa}--\eqref{1fd} 
 \begingroup

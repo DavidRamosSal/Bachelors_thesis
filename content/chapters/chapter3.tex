@@ -1,13 +1,10 @@
 \chapter{Estructura estelar}
-\TODO{Falta una parla que no me saleee}
-
 
 Explicar la variada fenomenología descrita en el capítulo anterior ha requerido la solución de retos teóricos en ramas tan variadas como la relatividad general, física de la materia condensada y física nuclear. 
 
-
 En este capítulo se derivarán las ecuaciones de estructura estelar para una estrella de neutrones fría, neutra, estática y con simetría esférica en la teoría newtoniana y en relatividad general. Después de identificar la necesidad de conocer la EOS de la materia para crear modelos estelares, se  describirá el problema de la EOS de la materia ultradensa y algunos de los métodos usados para hallarla.
 %Comparar los dos resultados permitirá identificar algunas de las predicciones de la relatividad general en objetos compactos. 
-Finalmente, se enunciará una lista de criterios de consistencia física y estabilidad que los modelos estelares deben cumplir, estos criterios serán usados el siguiente capítulo para evaluar qué tan realistas son los modelos estelares obtenidos con diferentes EOS.
+Para terminar se enunciará una lista de criterios de consistencia física y estabilidad que los modelos estelares deben cumplir, estos criterios serán usados el siguiente capítulo para evaluar qué tan realistas son los modelos estelares obtenidos con diferentes EOSs.
 
 
 
@@ -280,17 +277,17 @@ Una revisión general del estado del arte de las EOS para estrellas de neutrones
 \section{Condiciones de aceptabilidad física}\label{phyacep}
 Para que los modelos de objetos compactos obtenidos sean de interés astrofísico, las variables físicas y métricas deben cumplir con varias condiciones de regularidad, acoplamiento y estabilidad. Estas condiciones fueron recopiladas recientemente por B. V. Ivanov \cite{Ivanov2017} y extendidas por Nuñez et al. \cite{Hernandez2018}, a continuación se presentará la lista de condiciones y en el Apéndice \ref{AceppCon} se presentará el fundamento físico de cada una.
 
-\subsection*{C1. Sobre las funciones métricas}
-Las funciones métricas son positivas y deben ser finitas y libres de singularidades en el interior de la estrella.
+\subsection*{C1. Sobre los potenciales métricos}
+Los potenciales métricos son positivos y deben ser finitos y libres de singularidades en el interior de la estrella. 
 
 \subsection*{C2. Condiciones de acoplamiento}
 En la superficie de la estrella $r=R$ la solución interior se debe acoplar de manera continua a la solución exterior. Para el caso estático y esféricamente simétrico, la solución debe acoplarse con la solución exterior de Schwarzschild \eqref{schwarzs} mediante el requerimiento
 \begin{equation}
-     e ^ { -2 \lambda(R) } =  e ^ {  2 \nu(R) } =  1 - \frac { 2 M } { R }.
+      e ^ {  2 \nu(R) } =  1 - \frac { 2 M } { R } = e ^ { -2 \lambda(R) } 
 \end{equation}
 
 \subsection*{C3. Sobre el corrimiento al rojo}
-El corrimiento al rojo Z, dado por \eqref{redshift}, debe disminuir con el incremento de $r$.
+El corrimiento al rojo $z$, dado por \eqref{redshift}, debe disminuir con el incremento de $r$.
 
 \subsection*{C4. Sobre el signo de la densidad de energía y la presión}
 La densidad de energía y la presión deben ser positivas dentro de la estrella.
@@ -310,12 +307,22 @@ no puede sobrepasar la velocidad de la luz:
     0 < \dv{P}{\rho} \leq 1 .
 \end{equation}
 
-\subsection*{C8. Estabilidad ante pulsaciones radiales I. Criterio de estabilidad del índice adiabático } \TODO{Modificar de acuerdo a lo que se exponga en el apéndice}
+\subsection*{C8. Estabilidad ante pulsaciones radiales I. Criterio de estabilidad del índice adiabático } 
+\noindent El índice adiabático efectivo debe satisfacer \cite{Merafina1989}
 
 \begin{equation}
-    \Gamma = \frac { \rho + P  } { P } \dv{P}{\rho} \geq \frac{4}{3}.
+    \langle\gamma\rangle\equiv\frac{\int_{0}^{R} e^{\lambda+3 \nu} \gamma(r) P(r) r^{2} d r}{\int_{0}^{R} e^{\lambda+3 \nu} P(r) r^{2} d r} \geq \gamma_{cr},
 \end{equation}
-
+donde 
+\begin{equation}
+    \gamma = \frac { \rho + P  } { P } \dv{P}{\rho},
+\end{equation}
+y 
+\begin{align}
+    \gamma_{cr} = \frac{4}{3} +& \frac{1}{36} \frac{\int_{0}^{R} e^{\lambda+3 \mathrm{v}}\left[16 P+\left(e^{\lambda}-1\right)\left(P+\rho \right)\right]\left(e^{\lambda}-1\right) r^{2} d r}{\int_{0}^{R} e^{\lambda+3 \mathrm{v}} P r^{2} d r} \nonumber
+    \\ &+ \frac{4 \pi G}{9 c^{4}} \frac{\int_{0}^{R} e^{3( \lambda+ \mathrm{v})}\left[8 P+\left(e^{\lambda}+1\right)\left(P+\rho \right)\right] P r^{4} d r}{\int_{0}^{R} e^{\lambda+3 \mathrm{v}} P r^{2} d r}
+    \\ & + \frac{16 \pi^{2} }{9} \frac{\int_{0}^{R} e^{5 \lambda+3 v }\left(P+\rho \right) P^{2} r^{6} d r}{\int_{0}^{R} e^{\lambda+3 v } P r^{2} d r}. \nonumber
+\end{align}
 \subsection*{C9. Estabilidad ante cracking}
  El criterio para que una distribución sea estable ante cracking presentado por Nuñez et al. \cite{Gonzalez2014} es
 \begin{equation}
