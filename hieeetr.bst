@@ -217,7 +217,7 @@ FUNCTION {format.names}
 		'skip$
 	      if$
 	      t "others" =
-		{ " {\em et~al.}" * }
+		{ " et al." * }
 		{ " y " * t * }
 	      if$
 	    }
@@ -230,6 +230,7 @@ FUNCTION {format.names}
     }
   while$
 }
+
 
 FUNCTION {format.authors}
 { author empty$

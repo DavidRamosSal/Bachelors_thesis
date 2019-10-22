@@ -806,8 +806,8 @@
 	}
 
 \newenvironment{acknowledgements}
-	{\chapter*{Acknowledgements}}												%kai
-	{\addcontentsline{toc}{chapter}{Acknowledgements}}	%kai
+	{\chapter*{Agradecimientos}}												%kai
+	{\addcontentsline{toc}{chapter}{Agradecimientos}}	%kai
 
 \newenvironment{verse}
                {\let\\\@centercr

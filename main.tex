@@ -29,6 +29,7 @@
 \usepackage{enumitem}
 \usepackage{etoolbox}
 \usepackage{booktabs,arydshln,ltablex}
+\allowdisplaybreaks
 
 \def\adl@drawiv#1#2#3{%
         \hskip.5\tabcolsep
@@ -58,7 +59,7 @@
 % DOCUMENT METADATA
 
 \thesistype{TRABAJO DE GRADO PARA OPTAR AL TÍTULO DE FÍSICO} % Master's Thesis, Bachelor's Thesis, Semester Thesis, Group Project
-\title{ESTRUCTURA Y ESTABILIDAD DE OBJETOS COMPACTOS CON ECUACIONES DE ESTADO DE LA MATERIA ULTRADENSA}
+\title{ACEPTABILIDAD FÍSICA DE OBJETOS COMPACTOS CON ECUACIONES DE ESTADO REALISTAS}
 
 \author{DAVID LEONARDO RAMOS SALAMANCA}
 \email{}%david.ramos.salamanca@outlook.com}
@@ -68,7 +69,7 @@ ESCUELA DE FÍSICA \\[2pt]
 FACULTAD DE CIENCIAS \\[2pt]
 UNIVERSIDAD INDUSTRIAL DE SANTANDER \\[2pt]
 BUCARAMANGA \\[2pt]
-2018}
+2019}
 
 % Optionally, you can put in your own logo here
 %\logo{\includegraphics[width=0.4\columnwidth]{figures/uislogo}}
@@ -78,14 +79,14 @@ BUCARAMANGA \\[2pt]
 
 
 % Optionally, titleabs, authorabs, keywords and categories of the work can be shown (on the Abstract page)
-\keywords{Estructura estelar, estabilidad, ecuación de estado numérica}
-\titleabs{Estructura estelar de objetos compactos con ecuaciones de estado de la materia ultradensa\footnote{Trabajo de grado}} %Title for abstract
+\keywords{Objetos compactos,aceptabilidad física, Estabilidad, Ecuación de estado}
+\titleabs{Aceptabilidad física de objetos compactos con ecuaciones de estado realistas\footnote{Trabajo de grado}} %Title for abstract
 \authorabs{David Leonardo Ramos Salamanca\footnote{Facultad de Ciencias. Escuela de física. Director: Luis A. Núñez de Villavicencio Martínez}} %Author for abstract
 %\categories{ACM categories go here.}
 
 %Información para abstract en otro idioma----------------------- 
-\keywordss{Stellar structure, stability, numerical equation of state}
-\titleabss{Stellar structure and stability of compact objects with ultradense matter equations of state \footnote{Bachellor's thesis}} %Title for abstract
+\keywordss{Compact objects, Physical acceptability, Stability, Equation of state}
+\titleabss{Physical acceptability of compact objects with realistic equations of state \footnote{Bachellor's thesis}} %Title for abstract
 \authorabss{David Leonardo Ramos Salamanca\footnote{Facultad de Ciencias. Escuela de física. Adviser: Luis A. Núñez de Villavicencio Martínez}}
 
 \date{\today}
@@ -93,6 +94,7 @@ BUCARAMANGA \\[2pt]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
+
 
 \frontmatter % do not remove this line
 \maketitle
@@ -106,6 +108,9 @@ BUCARAMANGA \\[2pt]
 
 
 \tableofcontents
+\listoffigures
+ 
+\listoftables
 
 \mainmatter % do not remove this line
 
@@ -123,7 +128,8 @@ BUCARAMANGA \\[2pt]
 % This displays the bibliography for all cited external documents. All references have to be defined in the file references.bib and can then be cited from within this document.
 \bibliographystyle{hieeetr}
 
-\bibliography{references}\TODO{Chequear que los links estén correctos.}
+\bibliography{references}
+%\TODO{Chequear que los links estén correctos.}
 
 
 % This creates an appendix chapter, comment if not needed.
@@ -133,5 +139,7 @@ BUCARAMANGA \\[2pt]
 \input{content/appendices/appendix1.tex}
 \input{content/appendices/appendix2.tex}
 \input{content/appendices/appendix3.tex}
+
+\addtocontents{toc}{\protect\setcounter{tocdepth}{2}}
 
 \end{document}
